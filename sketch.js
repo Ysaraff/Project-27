@@ -10,7 +10,7 @@ function preload()
 }
 
 function setup() {
-	createCanvas(800, 700);
+	createCanvas(800, 500);
 
 
 	engine = Engine.create();
@@ -54,14 +54,14 @@ function draw() {
 
   roof1.display();
 
-  keyPressed();
+  //keyPressed();
   drawSprites();
  
 }
 function keyPressed(){
-if(keyCode === 32){
-	Matter.Body.applyForce(bob1.body,bob1.body.position,{x:150,y:200});
-}
-}
+	if(keyCode === 32){
+		Matter.Body.applyForce(bob1.body,bob1.body.position,{x:-100,y:600});
+	}
+	}
 
 
